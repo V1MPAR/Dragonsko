@@ -1,0 +1,32 @@
+.btn-action {
+    background: $accent;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+.badge-accent {
+    background: $accent;
+    border-radius: 6px;
+    padding: 0 5px;
+    font-weight: 700;
+}
+
+.badge-dark {
+    background: $dark;
+    border-radius: 6px;
+    padding: 0 5px;
+    font-weight: 700;
+}
+
+.input {
+    border-bottom: 2px solid $accent;
+    background: none;
+    color: #fff;
+    padding: 8px 0;
+    &::placeholder {
+        color: #fff;
+    }
+}

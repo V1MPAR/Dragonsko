@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Dla graczy z podziemia{% endblock %}
+
+{% block body %}
+<div class="flex flex-col justify-center items-center intro">
+    <h3>Dragoński serwer</h3>
+    <h5>Z graczami z podziemia</h5>
+    <h1>Już od <span>1.50zł</span>!</h1>
+</div>
+<div class="flex flex-row justify-around items-center connect-to-server">
+    <h3>Wykupiłeś wejście?<br />Połącz się z ts.dragonsko.pl!</h3>
+    <a href="ts3server://ts.dragonsko.pl" class="btn-action">Połącz się</a>
+</div>
+<div class="flex flex-wrap justify-center sm:justify-around items-center boxes">
+    <div class="flex flex-col w-full xl:w-1/3 boxes-inner items-center">
+        <div class="flex flex-col box-item w-3/4">
+            <div class="flex flex-col box-heading">
+                <h3>Dostępna ilość slotów</h3>
+            </div>
+            <div class="flex flex-col box-content justify-between items-center">
+                <h1>57</h1>
+            </div>
+        </div>
+        <div class="flex flex-col box-item w-3/4">
+            <div class="flex flex-col box-heading">
+                <h3>Status serwera</h3>
+            </div>
+            <div class="flex flex-col box-content justify-between items-center">
+                <h3>Serwer jest obecnie</h3>
+                <p><span>online</span></p>
+                <div class="flex flex-row justify-between items-center w-full px-8 py-4">
+                    <h3>Jest aktywny:</h3>
+                    <span class="badge-accent">40d 20h 33m</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col w-full xl:w-1/3 items-center boxes-inner">
+        <div class="flex flex-col box-item w-3/4">
+            <div class="flex flex-col box-heading">
+                <h3>Wykup sloty</h3>
+            </div>
+            <div class="flex flex-col box-content justify-between items-center">
+                <input class="input" type="number" step="1" min="1" placeholder="Ilość slotów" />
+                <p class="py-6">Do zapłaty: <span>1,50zł</span></p>
+                <button class="btn-action">Płacę z Dotpay</button>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col w-full xl:w-1/3 boxes-inner items-center">
+        <div class="flex flex-col box-item w-3/4">
+            <div class="flex flex-col box-heading">
+                <h3>Dostępna ilość osób online</h3>
+            </div>
+            <div class="flex flex-col box-content justify-between items-center">
+                <h1>14</h1>
+            </div>
+        </div>
+        <div class="flex flex-col box-item w-3/4">
+            <div class="flex flex-col box-heading">
+                <h3>Status administracji</h3>
+            </div>
+            <div class="flex flex-col box-content justify-between items-center">
+                <h3>Właściciel</h3>
+                <div class="flex flex-row justify-between items-center w-full px-8 py-1">
+                    <h3>V1MPAR</h3>
+                    <span class="badge-accent">Online</span>
+                </div>
+                <div class="flex flex-row justify-between items-center w-full px-8 py-1">
+                    <h3>Siemanek</h3>
+                    <span class="badge-dark">Offline</span>
+                </div>
+                <h3 class="py-4">Admin</h3>
+                <div class="flex flex-row justify-between items-center w-full px-8 py-1">
+                    <h3>Karim</h3>
+                    <span class="badge-dark">Offline</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

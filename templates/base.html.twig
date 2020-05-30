@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{% block title %}DRAGOŃSKO :: {% endblock %}</title>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <div class="flex flex-col">
+        <div class="flex flex-row justify-between items-center header">
+            <div class="flex flex-col logo">
+                <img src="{{ asset('assets/img/logo.png') }}" />
+            </div>
+            <ul class="flex flex-row menu">
+                <li><a href="#">O nas</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li>
+                    <a href="#">
+                        <span class="btn-action">Zaloguj się</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% block body %}{% endblock %}
+    <div class="flex flex-col">
+        <div class="flex flex-col justify-center items-center footer">
+            <p>Copyright &copy; 2020 <a href="{{ url('index') }}">dragonsko.pl</a></p>
+            <p>Created by <a href="https://mdomurad.com" target="_blank">mdomurad.com</a></p>
+        </div>
+    </div>
+    {% block javascripts %}{% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
 </html>
