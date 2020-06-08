@@ -16,7 +16,7 @@
     <div class="flex flex-col w-full xl:w-1/3 boxes-inner items-center">
         <div class="flex flex-col box-item w-3/4">
             <div class="flex flex-col box-heading">
-                <h3>Dostępna ilość slotów</h3>
+                <h3>Dostępna ilość slotów do wykupienia</h3>
             </div>
             <div class="flex flex-col box-content justify-between items-center">
                 <h1>57</h1>
@@ -28,10 +28,14 @@
             </div>
             <div class="flex flex-col box-content justify-between items-center">
                 <h3>Serwer jest obecnie</h3>
-                <p><span>online</span></p>
-                <div class="flex flex-row justify-between items-center w-full px-8 py-4">
+                <p><span>{{ status }}</span></p>
+                <div class="flex flex-row justify-between items-center w-full px-8 py-1">
                     <h3>Jest aktywny:</h3>
-                    <span class="badge-accent">40d 20h 33m</span>
+                    <span class="badge-accent">{{ uptime }}</span>
+                </div>
+                <div class="flex flex-row justify-between items-center w-full px-8 py-1">
+                    <h3>Obecnie online:</h3>
+                    <span class="badge-accent">{{ currentUsersOnline }}/{{ maxUsers }}</span>
                 </div>
             </div>
         </div>
@@ -54,7 +58,7 @@
                 <h3>Dostępna ilość osób online</h3>
             </div>
             <div class="flex flex-col box-content justify-between items-center">
-                <h1>14</h1>
+                <h1>{{ currentUsersOnline }}</h1>
             </div>
         </div>
         <div class="flex flex-col box-item w-3/4">
@@ -72,6 +76,11 @@
                     <span class="badge-dark">Offline</span>
                 </div>
                 <h3 class="py-4">Admin</h3>
+                <div class="flex flex-row justify-between items-center w-full px-8 py-1">
+                    <h3>Karim</h3>
+                    <span class="badge-dark">Offline</span>
+                </div>
+                <h3 class="py-4">Moderator</h3>
                 <div class="flex flex-row justify-between items-center w-full px-8 py-1">
                     <h3>Karim</h3>
                     <span class="badge-dark">Offline</span>
